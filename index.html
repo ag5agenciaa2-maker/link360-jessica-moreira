@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jéssica Moreira Advocacia | Campo Grande - RJ</title>
+    <meta name="description"
+        content="Advogada Previdenciária em Campo Grande - RJ. Especialista em Aposentadorias, Benefícios do INSS e Planejamento Previdenciário. Atendimento humanizado e online.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/jpeg"
+        href="https://storage.googleapis.com/msgsndr/7hzaWcGgawCV1WudlwA7/media/697cf7ef1fd8275915f324a0.jpeg">
+
+    <style>
+        /* === RESET & BASE === */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background: #f0ece6;
+            color: #3a3a3a;
+        }
+
+        /* === VARIÁVEIS DE COR === */
+        :root {
+            --brand: #4A5D23;
+            /* Verde Musgo */
+            --brand-hover: #3D4D1C;
+            --brand-light: #F8F9F7;
+            --brand-lighter: #E8EBE5;
+            --brand-10: rgba(74, 93, 35, 0.1);
+            --brand-20: rgba(74, 93, 35, 0.2);
+            --brand-30: rgba(74, 93, 35, 0.3);
+            --gold: #B8860B;
+            /* Dourado */
+            --gold-light: #D4A84B;
+            --dark: #1A1A1A;
+            /* Preto/Cinza Escuro */
+            --brown: #3E2723;
+            /* Marrom */
+            --gray: #6B7280;
+            --gray-light: #D1D6CC;
+            --white: #FFFFFF;
+            --zinc-100: #F8F9F7;
+            --zinc-300: #d4d4d8;
+            --zinc-400: #a1a1aa;
+            --zinc-500: #71717a;
+            --zinc-600: #52525b;
+            --zinc-700: #3f3f46;
+            --zinc-800: #27272a;
+            --zinc-900: #18181b;
+        }
+
+        /* === CONTAINER PRINCIPAL === */
+        .page-wrapper {
+            min-height: 100vh;
+            max-width: 32rem;
+            margin: 0 auto;
+            background: var(--brand-light);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* === HEADER / PERFIL === */
+        .profile-section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1rem 1rem;
+        }
+
+        .profile-bg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 16rem;
+            background: linear-gradient(to bottom, var(--brand-10), transparent);
+            border-bottom-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+            z-index: 0;
+        }
+
+        .avatar-ring {
+            position: relative;
+            width: 8.5rem;
+            height: 8.5rem;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, var(--gold), var(--brand));
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+            margin-bottom: 1.5rem;
+            z-index: 1;
+        }
+
+        .avatar-ring img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            background: var(--white);
+            border-radius: 50%;
+            padding: 4px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .verified-badge svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--brand);
+        }
+
+        .profile-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            z-index: 1;
+        }
+
+        .profile-tag {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 0.82rem;
+            color: var(--brand);
+            background: var(--white);
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid var(--brand-20);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+            z-index: 1;
+        }
+
+        .profile-desc {
+            color: var(--gray);
+            max-width: 24rem;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 0.875rem;
+            font-weight: 500;
+            z-index: 1;
+        }
+
+        /* Status pill */
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--zinc-800);
+            border-radius: 9999px;
+            padding: 0.35rem 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--zinc-700);
+            margin-top: 1.5rem;
+        }
+
+        .status-dot {
+            position: relative;
+            width: 0.5rem;
+            height: 0.5rem;
+        }
+
+        .status-dot span {
+            display: inline-flex;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            background: #22c55e;
+        }
+
+        .status-dot .ping {
+            position: absolute;
+            inset: 0;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            opacity: 0.75;
+        }
+
+        @keyframes ping {
+
+            75%,
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .status-text {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--zinc-400);
+        }
+
+        /* === LINKS / BOTÕES === */
+        .links-section {
+            padding: 1rem;
+        }
+
+        .link-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            height: 5.5rem;
+            border-radius: 1rem;
+            padding: 0 1.5rem;
+            margin-bottom: 0.75rem;
+            text-decoration: none;
+            color: var(--white);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            text-align: left;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .link-btn:active {
+            transform: scale(0.98);
+        }
+
+        .link-btn .icon {
+            flex-shrink: 0;
+            z-index: 1;
+        }
+
+        .link-btn .icon svg {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+
+        .link-btn .text {
+            flex: 1;
+            z-index: 1;
+        }
+
+        .link-btn .label {
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            opacity: 0.8;
+            margin-bottom: 2px;
+        }
+
+        .link-btn .title {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        .link-btn .arrow {
+            margin-left: auto;
+            padding-left: 0.5rem;
+            opacity: 0.6;
+            z-index: 1;
+            transition: all 0.3s;
+        }
+
+        .link-btn:hover .arrow {
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        .link-btn .arrow svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        /* Shine effect */
+        .link-btn .shine {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 33%;
+            background: linear-gradient(to left, rgba(255, 255, 255, 0.05), transparent);
+            transform: skewX(12deg);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .link-btn:hover .shine {
+            opacity: 1;
+        }
+
+        /* WhatsApp principal customizado */
+        .btn-whatsapp {
+            background: linear-gradient(to right, var(--brand), var(--brand-hover));
+            border: 2px solid var(--gold);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+            color: var(--white);
+            animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .btn-whatsapp:hover {
+            animation: none;
+            background: linear-gradient(to right, var(--brand-hover), var(--brand));
+            border-color: var(--gold-light);
+        }
+
+        .btn-whatsapp .icon {
+            color: var(--gold-light);
+            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+        }
+
+        .btn-whatsapp .title {
+            color: var(--white);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .btn-whatsapp .label {
+            color: var(--gold-light);
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes pulse-slow {
+            50% {
+                opacity: 0.85;
+            }
+        }
+
+        /* Decoração WA */
+        .btn-whatsapp .bg-deco {
+            position: absolute;
+            right: -1rem;
+            bottom: -1rem;
+            opacity: 0.15;
+            transform: rotate(12deg);
+            transition: transform 0.5s;
+        }
+
+        .btn-whatsapp:hover .bg-deco {
+            transform: rotate(12deg) scale(1.1);
+        }
+
+        .btn-whatsapp .bg-deco svg {
+            width: 6rem;
+            height: 6rem;
+        }
+
+        /* Botões escuros */
+        .btn-dark {
+            background: var(--zinc-800);
+            box-shadow: 0 10px 15px -3px rgba(39, 39, 42, 0.2);
+            border: 1px solid var(--zinc-700);
+        }
+
+        .btn-dark:hover {
+            background: var(--zinc-700);
+        }
+
+        /* === DIFERENCIAIS === */
+        .features-section {
+            padding: 2rem 1rem;
+            margin-top: 1rem;
+        }
+
+        .features-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 1rem;
+            border: 1px solid var(--zinc-100);
+            text-align: center;
+            gap: 0.75rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            color: var(--brand);
+            background: var(--brand-lighter);
+            padding: 0.75rem;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .feature-item:hover .feature-icon {
+            background: var(--brand);
+            color: var(--white);
+        }
+
+        .feature-icon svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .feature-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--zinc-500);
+            line-height: 1.3;
+            transition: color 0.3s;
+        }
+
+        .feature-item:hover .feature-label {
+            color: var(--brand);
+        }
+
+        /* === SOBRE === */
+        .about-section {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin: 0 1rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--zinc-100);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-deco {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5rem;
+            height: 5rem;
+            background: var(--brand-10);
+            border-bottom-left-radius: 9999px;
+            margin-right: -2.5rem;
+            margin-top: -2.5rem;
+        }
+
+        .about-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        .about-text {
+            color: var(--gray);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            text-align: justify;
+            position: relative;
+        }
+
+        .about-text strong {
+            color: var(--brand);
+        }
+
+        /* === SERVIÇOS === */
+        .services-section {
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .services-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0 0.25rem;
+        }
+
+        .services-header svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: var(--brand);
+        }
+
+        .services-header h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--zinc-100);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            text-align: left;
+            cursor: default;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card .card-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: var(--brand-10);
+        }
+
+        .service-card .card-icon svg {
+            width: 2rem;
+            height: 2rem;
+            color: var(--brand);
+        }
+
+        .service-card .card-body {
+            padding: 0.75rem;
+            flex: 1;
+        }
+
+        .service-card h3 {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .service-card p {
+            font-size: 0.7rem;
+            color: var(--zinc-500);
+            line-height: 1.4;
+        }
+
+        /* === LOCALIZAÇÃO === */
+        .location-section {
+            background: var(--zinc-800);
+            color: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            margin: 2rem 1rem 0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-body {
+            padding: 1.5rem;
+        }
+
+        .location-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .location-title svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: var(--brand);
+        }
+
+        .location-address {
+            font-style: normal;
+            color: var(--zinc-300);
+            font-size: 0.875rem;
+        }
+
+        .location-address .street {
+            font-weight: 500;
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        .location-address .note {
+            font-size: 0.75rem;
+            color: var(--zinc-500);
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--zinc-700);
+        }
+
+        .hours-block {
+            margin-top: 1rem;
+        }
+
+        .hours-label {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--brand);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hours-label svg {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .hours-list {
+            background: rgba(63, 63, 70, 0.5);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--zinc-300);
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+        .hours-list li+li {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid rgba(82, 82, 91, 0.5);
+        }
+
+        .hours-list span:last-child {
+            font-weight: 500;
+            color: var(--white);
+        }
+
+        .location-map {
+            width: 100%;
+            height: 12rem;
+            background: var(--zinc-700);
+            position: relative;
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .location-map a {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            background: transparent;
+        }
+
+        .map-open {
+            padding: 1rem;
+            background: var(--zinc-900);
+            text-align: center;
+        }
+
+        .map-open a {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 0.875rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .map-open a:hover {
+            text-decoration: underline;
+        }
+
+        .map-open svg {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            margin-top: 3rem;
+            padding: 2rem 1rem;
+            background: var(--zinc-900);
+            color: var(--gray);
+            text-align: center;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+
+        .footer-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--zinc-800);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--zinc-300);
+            border: 1px solid var(--zinc-700);
+        }
+
+        .footer-badge svg {
+            width: 0.875rem;
+            height: 0.875rem;
+            color: var(--brand);
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--zinc-800);
+            border-radius: 50%;
+            color: var(--zinc-400);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover {
+            background: var(--brand);
+            color: var(--white);
+            transform: translateY(-4px);
+        }
+
+        .footer-social svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .footer-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.875rem;
+            color: var(--white);
+            letter-spacing: 0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-copy {
+            font-size: 0.75rem;
+            opacity: 0.5;
+        }
+
+        .footer-credit {
+            display: block;
+            font-size: 10px;
+            opacity: 0.3;
+            margin-top: 1rem;
+            letter-spacing: 0.1em;
+            color: var(--zinc-400);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-credit:hover {
+            opacity: 1;
+            color: var(--brand);
+        }
+
+        /* === FAB WhatsApp === */
+        .fab-whatsapp {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 40;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, var(--brand), var(--brand-hover));
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+            color: var(--white);
+            animation: bounce 1s infinite;
+            text-decoration: none;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(-15%);
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+
+            50% {
+                transform: none;
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+
+        .fab-whatsapp svg {
+            width: 2rem;
+            height: 2rem;
+            fill: currentColor;
+        }
+
+        /* === RESPONSIVO === */
+        @media (min-width: 768px) {
+            .avatar-ring {
+                width: 10rem;
+                height: 10rem;
+            }
+
+            .profile-name {
+                font-size: 1.875rem;
+            }
+
+            .profile-desc {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- PERFIL -->
+        <section class="profile-section">
+            <div class="profile-bg"></div>
+            <div class="avatar-ring">
+                <img src="https://storage.googleapis.com/msgsndr/7hzaWcGgawCV1WudlwA7/media/697cf7ef5accfa83d52af95b.png"
+                    alt="Dra. Jéssica Moreira - Advogada Previdenciária">
+                <div class="verified-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                </div>
+            </div>
+            <h1 class="profile-name">Jéssica Moreira Advocacia</h1>
+            <span class="profile-tag">Advogada Previdenciária em Campo Grande - RJ</span>
+            <p class="profile-desc">Orientação jurídica em aposentadorias, benefícios do INSS e planejamento
+                previdenciário, com atendimento humanizado e online.</p>
+            <div class="status-pill">
+                <div class="status-dot">
+                    <span class="ping"></span>
+                    <span></span>
+                </div>
+                <span class="status-text">Atendimento Online Disponível</span>
+            </div>
+        </section>
+
+        <!-- LINKS -->
+        <main class="links-section">
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5521983714983?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                target="_blank" rel="noopener noreferrer" class="link-btn btn-whatsapp">
+                <div class="bg-deco"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" />
+                    </svg></div>
+                <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg></div>
+                <div class="text">
+                    <span class="label">Contato Imediato</span>
+                    <span class="title">Falar no WhatsApp</span>
+                </div>
+                <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg></div>
+            </a>
+
+            <!-- Site -->
+            <a href="https://www.jessicamoreiraadvocacia.ag5agencia.site/" target="_blank" rel="noopener noreferrer"
+                class="link-btn btn-dark">
+                <div class="shine"></div>
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                        <path d="M2 12h20" />
+                    </svg></div>
+                <div class="text">
+                    <span class="label">Página Oficial</span>
+                    <span class="title">Visite nosso Site</span>
+                </div>
+                <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg></div>
+            </a>
+
+            <!-- Perfil Google -->
+            <a href="https://share.google/bV6vpUat2hign9Vrv" target="_blank" rel="noopener noreferrer"
+                class="link-btn btn-dark">
+                <div class="shine"></div>
+                <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
+                    </svg></div>
+                <div class="text">
+                    <span class="label">Google Meu Negócio</span>
+                    <span class="title">Nosso Perfil no Google</span>
+                </div>
+                <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg></div>
+            </a>
+
+            <!-- Como Chegar -->
+            <a href="https://maps.app.goo.gl/Xk8RLv3YqWrZc2dU7" target="_blank" rel="noopener noreferrer"
+                class="link-btn btn-dark">
+                <div class="shine"></div>
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                    </svg></div>
+                <div class="text">
+                    <span class="label">Onde Estamos</span>
+                    <span class="title">Como Chegar</span>
+                </div>
+                <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg></div>
+            </a>
+
+            <!-- Avalie no Google -->
+            <a href="https://search.google.com/local/writereview?placeid=ChIJI-q1MMThmwAR6sDecDweimo" target="_blank"
+                rel="noopener noreferrer" class="link-btn btn-dark">
+                <div class="shine"></div>
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                    </svg></div>
+                <div class="text">
+                    <span class="label">Sua opinião importa</span>
+                    <span class="title">Avalie no Google</span>
+                </div>
+                <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg></div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/jessica.moreira.adv" target="_blank" rel="noopener noreferrer"
+                class="link-btn btn-dark">
+                <div class="shine"></div>
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg></div>
+                <div class="text">
+                    <span class="label">Acompanhe</span>
+                    <span class="title">Siga no Instagram</span>
+                </div>
+                <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg></div>
+            </a>
+
+            <!-- DIFERENCIAIS -->
+            <section class="features-section">
+                <h2 class="features-title">Nossos Diferenciais</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg></div>
+                        <span class="feature-label">OAB Ativa e Verificada</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg></div>
+                        <span class="feature-label">Atendimento Humanizado</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg></div>
+                        <span class="feature-label">Atendimento Online</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg></div>
+                        <span class="feature-label">Planejamento Estratégico</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <path d="M9 15l2 2 4-4" />
+                            </svg></div>
+                        <span class="feature-label">Análise Detalhada do CNIS</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg></div>
+                        <span class="feature-label">Comissão OAB/RJ Ativa</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOBRE -->
+            <section class="about-section">
+                <div class="about-deco"></div>
+                <h2 class="about-title">Sobre o Escritório</h2>
+                <p class="about-text">Atuação em Direito Previdenciário com foco em <strong>planejamento de
+                        aposentadoria, benefícios do INSS e aposentadoria especial</strong>. Membro da Comissão de
+                    Direito Previdenciário da 29ª Subseção da OAB/RJ, com atendimento online para todo o Brasil e
+                    presencial em Campo Grande - RJ.</p>
+            </section>
+
+            <!-- SERVIÇOS -->
+            <section class="services-section">
+                <div class="services-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <h2>Áreas de Atuação</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg></div>
+                        <div class="card-body">
+                            <h3>Planejamento Previdenciário</h3>
+                            <p>Análise do histórico contributivo e melhor estratégia de aposentadoria.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg></div>
+                        <div class="card-body">
+                            <h3>Aposentadorias</h3>
+                            <p>Por idade, tempo de contribuição e aposentadoria especial.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg></div>
+                        <div class="card-body">
+                            <h3>Benefícios do INSS</h3>
+                            <p>BPC/LOAS, pensão por morte e benefícios por incapacidade.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 20h9" />
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                            </svg></div>
+                        <div class="card-body">
+                            <h3>Atuação Admin. e Judicial</h3>
+                            <p>Requerimentos, recursos e ações previdenciárias.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LOCALIZAÇÃO -->
+            <section class="location-section">
+                <div class="location-body">
+                    <h2 class="location-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Localização
+                    </h2>
+                    <address class="location-address">
+                        <p class="street">Rua Votorantin, 44</p>
+                        <p>Campo Grande, Rio de Janeiro - RJ</p>
+                        <p>CEP: 23095-710</p>
+                        <p class="note">Atendemos: Campo Grande, Inhoaíba, Cosmos, Paciência, Guaratiba, Bangu e região.
+                        </p>
+                    </address>
+                    <div class="hours-block">
+                        <h3 class="hours-label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 6v6l4 2" />
+                                <circle cx="12" cy="12" r="10" />
+                            </svg>
+                            Horário de Atendimento
+                        </h3>
+                        <ul class="hours-list">
+                            <li><span>Segunda a Sexta</span><span>09:00 - 18:00</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.8!2d-43.5564!3d-22.9008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9be19bc4c4b5ea23%3A0x986a1e3c70dec1ea!2sR.%20Votorantin%2C%2044%20-%20Campo%20Grande%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa da Localização"></iframe>
+                    <a href="https://maps.app.goo.gl/Xk8RLv3YqWrZc2dU7" target="_blank" rel="noopener noreferrer"
+                        aria-label="Abrir no Google Maps"></a>
+                </div>
+                <div class="map-open">
+                    <a href="https://maps.app.goo.gl/Xk8RLv3YqWrZc2dU7" target="_blank" rel="noopener noreferrer">Abrir
+                        no Navegador <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                        </svg></a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-badges">
+                <div class="footer-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="M9 12l2 2 4-4" />
+                    </svg>
+                    OAB/RJ Ativa
+                </div>
+                <div class="footer-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="M9 12l2 2 4-4" />
+                    </svg>
+                    Comissão Previdenciária
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com/jessica.moreira.adv" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+                <a href="https://share.google/bV6vpUat2hign9Vrv" target="_blank" rel="noopener noreferrer"
+                    aria-label="Google Meu Negócio">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-name">Jéssica Moreira Advocacia</p>
+            <p class="footer-copy">© 2026 - Todos os direitos reservados.</p>
+            <a href="https://ag5agencia.com.br" target="_blank" rel="noopener noreferrer" class="footer-credit">Design e
+                desenvolvimento por: AG5 Agência</a>
+        </footer>
+
+        <!-- FAB WhatsApp -->
+        <a href="https://wa.me/5521983714983?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+            target="_blank" rel="noopener noreferrer" class="fab-whatsapp" aria-label="Falar no WhatsApp">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" />
+            </svg>
+        </a>
+
+    </div>
+
+</body>
+
+</html>
